@@ -186,9 +186,10 @@ First we need to compile Qt for host.
 ```bash
 cd ~
 git clone "https://codereview.qt-project.org/qt/qt5" qt6
+mkdir qt6/host qt6/pi qt6/host-build qt6/pi-build qt6/src
+cd qt6
 git checkout 6.9.1
 perl init-repository -f
-mkdir qt6/host qt6/pi qt6/host-build qt6/pi-build qt6/src
 cd qt6/host-build/
 cmake ../../qtbase-everywhere-src-6.9.1/ -GNinja -DCMAKE_BUILD_TYPE=Release -DQT_BUILD_EXAMPLES=OFF -DQT_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=$HOME/qt6/host
 cmake --build . --parallel 8
