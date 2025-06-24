@@ -134,7 +134,8 @@ export PATH=/opt/cross-pi-gcc/bin:$PATH
 We need kernel interfaces for compilation for related architecture
 ```bash
 cd linux/
-make KERNEL=kernel8 ARCH=arm64 INSTALL_HDR_PATH=/opt/cross-pi-gcc/aarch64-linux-gnu headers_install
+KERNEL=kernel8
+make ARCH=arm64 INSTALL_HDR_PATH=/opt/cross-pi-gcc/aarch64-linux-gnu headers_install
 ```
 Compile binutils
 ```bash
