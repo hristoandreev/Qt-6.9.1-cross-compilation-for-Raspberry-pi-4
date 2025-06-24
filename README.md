@@ -146,6 +146,12 @@ make -j 8
 make install
 ```
 Add PATH_MAX define into to asan_linux.cpp (gcc-12.2.0/libsanitizer/asan/asan_linux.cpp)
+
+```bash
+#ifndef PATH_MAX
+#define PATH_MAX 4096
+#endif
+```
 Otherwise you will have compilation error.
 
 Compile gcc and glibc partly
